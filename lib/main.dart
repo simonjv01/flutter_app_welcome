@@ -30,7 +30,8 @@ class WelcomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Image.asset('images/welcome.png'),
+      body: Image.network('https://picsum.photos/250?image=9'),
+      //Image.asset('images/welcome.png'),
     );
   }
 }
