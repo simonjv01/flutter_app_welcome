@@ -28,7 +28,7 @@ class WelcomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Welcome'),
           centerTitle: true,
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Colors.blueAccent,
         ),
         body: Center(
           child: Image.asset('images/welcome.png'),
