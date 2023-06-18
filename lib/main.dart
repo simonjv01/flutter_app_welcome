@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.green,
       ),
       home: const WelcomePage(),
     );
@@ -25,14 +25,14 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome'),
-          centerTitle: true,
-          backgroundColor: Colors.blueAccent,
-        ),
-        body: Center(
-          child: Image.asset('images/welcome.png'),
-        ) //Image.asset('images/welcome.png'),
-        );
+      appBar: AppBar(
+        title: const Text('Welcome'),
+        centerTitle: true,
+        backgroundColor: Colors.greenAccent,
+      ),
+      body: Center(
+        child: Image.asset('images/rock.png'),
+      ),
+    );
   }
 }
