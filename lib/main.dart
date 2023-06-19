@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
       ),
       home: const WelcomePage(),
     );
@@ -28,10 +28,10 @@ class WelcomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Welcome'),
         centerTitle: true,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.redAccent,
       ),
       body: Center(
-        child: Image.asset('images/rock.png'),
+        child: Image.asset('images/welcome.png'),
       ),
     );
   }
