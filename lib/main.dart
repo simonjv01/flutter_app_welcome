@@ -45,31 +45,34 @@ class _WelcomePageState extends State<WelcomePage> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 50.0,
-            ),
-            ElevatedButton(
-              style:
-                  ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
-              onPressed: () {
-                setState(() {
-                  if (currentPath == imagePath1) {
-                    currentPath = imagePath2;
-                  } else {
-                    currentPath = imagePath1;
-                  }
-                });
-              },
-              child: const Text('Click'),
-            ),
-            const SizedBox(
-              height: 50.0,
-            ),
-            Image.asset(currentPath),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 50.0,
+              ),
+              ElevatedButton(
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+                onPressed: () {
+                  setState(() {
+                    if (currentPath == imagePath1) {
+                      currentPath = imagePath2;
+                    } else {
+                      currentPath = imagePath1;
+                    }
+                  });
+                },
+                child: const Text('Click'),
+              ),
+              const SizedBox(
+                height: 50.0,
+              ),
+              Image.asset(currentPath),
+              Image.asset(currentPath),
+            ],
+          ),
         ),
       ),
     );
