@@ -4,8 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,9 +25,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class WelcomePage extends StatelessWidget {
+String imagePath1 = 'images/welcome.png';
+String imagePath2 = 'images/yeah.png';
+String currentPath = imagePath1;
+
+class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
 
+  @override
+  State<WelcomePage> createState() => _WelcomePageState();
+}
+
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +46,25 @@ class WelcomePage extends StatelessWidget {
         backgroundColor: Colors.redAccent,
       ),
       body: Center(
-        child: Image.asset('images/welcome.png'),
+        child: Column(
+          children: [
+            ElevatedButton(
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+              onPressed: () {
+                setState(() {
+                  if (currentPath == imagePath1) {
+                    currentPath = imagePath2;
+                  } else {
+                    currentPath = imagePath1;
+                  }
+                });
+              },
+              child: const Text('Click'),
+            ),
+            Image.asset(currentPath),
+          ],
+        ),
       ),
     );
   }
