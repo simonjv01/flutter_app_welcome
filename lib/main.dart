@@ -48,6 +48,9 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Center(
         child: Column(
           children: [
+            const SizedBox(
+              height: 50.0,
+            ),
             ElevatedButton(
               style:
                   ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
@@ -61,6 +64,9 @@ class _WelcomePageState extends State<WelcomePage> {
                 });
               },
               child: const Text('Click'),
+            ),
+            const SizedBox(
+              height: 50.0,
             ),
             Image.asset(currentPath),
           ],
