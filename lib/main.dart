@@ -69,8 +69,12 @@ class _WelcomePageState extends State<WelcomePage> {
               const SizedBox(
                 height: 50.0,
               ),
-              Image.asset(currentPath),
-              Image.asset(currentPath),
+              Column(
+                children: List.generate(
+                  4,
+                  (index) => Image.asset(currentPath),
+                ),
+              ),
             ],
           ),
         ),
