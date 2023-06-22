@@ -37,6 +37,7 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
+  int numberOfImage = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,12 +67,30 @@ class _WelcomePageState extends State<WelcomePage> {
                 },
                 child: const Text('Click'),
               ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.redAccent,
+                ),
+                onPressed: () {
+                  setState(() {
+                    numberOfImage = numberOfImage + 1;
+                  });
+                },
+                child: const Text('Add an image'),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      numberOfImage = 0;
+                    });
+                  },
+                  child: const Text('Reset Images')),
               const SizedBox(
                 height: 50.0,
               ),
               Column(
                 children: List.generate(
-                  4,
+                  numberOfImage,
                   (index) => Image.asset(currentPath),
                 ),
               ),
