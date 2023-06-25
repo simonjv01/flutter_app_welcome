@@ -69,29 +69,29 @@ class _WelcomePageState extends State<WelcomePage> {
                     },
                     child: const Text('Click'),
                   ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        numberOfImage = numberOfImage + 1;
+                      });
+                    },
+                    child: const Text('Add an image'),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          numberOfImage = 0;
+                        });
+                      },
+                      child: const Text('Reset Images')),
+                  const SizedBox(
+                    height: 50.0,
+                  ),
                 ],
               ),
-              const SizedBox(
-                height: 50.0,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.redAccent,
-                ),
-                onPressed: () {
-                  setState(() {
-                    numberOfImage = numberOfImage + 1;
-                  });
-                },
-                child: const Text('Add an image'),
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      numberOfImage = 0;
-                    });
-                  },
-                  child: const Text('Reset Images')),
               const SizedBox(
                 height: 50.0,
               ),
