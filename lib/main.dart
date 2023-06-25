@@ -69,6 +69,9 @@ class _WelcomePageState extends State<WelcomePage> {
                     },
                     child: const Text('Click'),
                   ),
+                  const SizedBox(
+                    width: 25.0,
+                  ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
@@ -80,6 +83,9 @@ class _WelcomePageState extends State<WelcomePage> {
                     },
                     child: const Text('Add an image'),
                   ),
+                  const SizedBox(
+                    width: 25.0,
+                  ),
                   ElevatedButton(
                       onPressed: () {
                         setState(() {
@@ -87,13 +93,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         });
                       },
                       child: const Text('Reset Images')),
-                  const SizedBox(
-                    height: 50.0,
-                  ),
                 ],
-              ),
-              const SizedBox(
-                height: 50.0,
               ),
               Column(
                 children: List.generate(
