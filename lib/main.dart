@@ -54,6 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 height: 50.0,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -78,10 +79,10 @@ class _WelcomePageState extends State<WelcomePage> {
                     ),
                     onPressed: () {
                       setState(() {
-                        numberOfImage = numberOfImage + 1;
+                        numberOfImage++;
                       });
                     },
-                    child: const Text('Add an image'),
+                    child: Text('Add an image ($numberOfImage)'),
                   ),
                   const SizedBox(
                     width: 25.0,
