@@ -25,10 +25,6 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-String imagePath1 = 'images/welcome.png';
-String imagePath2 = 'images/yeah.png';
-String currentPath = imagePath1;
-
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
 
@@ -37,7 +33,6 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  int numberOfImage = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +70,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
               const SizedBox(height: 50.0),
-              Image.asset(currentPath)
+              Image.asset('images/welcome.png')
             ],
           ),
         ),
