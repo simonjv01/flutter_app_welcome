@@ -63,7 +63,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: const Text('Login'),
                   ),
                   const SizedBox(
-                    width: 25.0,
+                    width: 50.0,
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -72,17 +72,10 @@ class _WelcomePageState extends State<WelcomePage> {
                     onPressed: () {},
                     child: const Text('Register'),
                   ),
-                  const SizedBox(
-                    width: 25.0,
-                  ),
                 ],
               ),
-              Column(
-                children: List.generate(
-                  numberOfImage,
-                  (index) => Image.asset(currentPath),
-                ),
-              ),
+              const SizedBox(height: 50.0),
+              Image.asset(currentPath)
             ],
           ),
         ),
