@@ -59,16 +59,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.redAccent),
-                    onPressed: () {
-                      setState(() {
-                        if (currentPath == imagePath1) {
-                          currentPath = imagePath2;
-                        } else {
-                          currentPath = imagePath1;
-                        }
-                      });
-                    },
-                    child: const Text('Click'),
+                    onPressed: () {},
+                    child: const Text('Login'),
                   ),
                   const SizedBox(
                     width: 25.0,
@@ -77,23 +69,12 @@ class _WelcomePageState extends State<WelcomePage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
                     ),
-                    onPressed: () {
-                      setState(() {
-                        numberOfImage++;
-                      });
-                    },
-                    child: Text('Add an image ($numberOfImage)'),
+                    onPressed: () {},
+                    child: const Text('Register'),
                   ),
                   const SizedBox(
                     width: 25.0,
                   ),
-                  ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          numberOfImage = 0;
-                        });
-                      },
-                      child: const Text('Reset Images')),
                 ],
               ),
               Column(
