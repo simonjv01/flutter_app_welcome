@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'pages/login_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -65,7 +67,11 @@ class _WelcomePageState extends State<WelcomePage> {
                       backgroundColor: Colors.redAccent,
                     ),
                     onPressed: () {
-                      Navigator.of(context);
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context){
+                          return const LoginPage();
+                        }),
+                        );
                     },
                     child: const Text('Register'),
                   ),
