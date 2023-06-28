@@ -64,7 +64,9 @@ class _WelcomePageState extends State<WelcomePage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context);
+                    },
                     child: const Text('Register'),
                   ),
                 ],
