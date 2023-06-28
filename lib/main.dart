@@ -56,7 +56,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.redAccent),
-                    onPressed: () {},
+                    onPressed: () {
+                         Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context){
+                          return const LoginPage();
+                        }),
+                        );
+                    },
                     child: const Text('Login'),
                   ),
                   const SizedBox(
@@ -67,11 +73,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       backgroundColor: Colors.redAccent,
                     ),
                     onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context){
-                          return const LoginPage();
-                        }),
-                        );
+                   
                     },
                     child: const Text('Register'),
                   ),
