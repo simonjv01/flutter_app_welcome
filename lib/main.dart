@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_welcome/pages/register_page.dart';
 
 import 'pages/login_page.dart';
 
@@ -57,11 +58,11 @@ class _WelcomePageState extends State<WelcomePage> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.redAccent),
                     onPressed: () {
-                         Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context){
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) {
                           return const LoginPage();
                         }),
-                        );
+                      );
                     },
                     child: const Text('Login'),
                   ),
@@ -73,7 +74,11 @@ class _WelcomePageState extends State<WelcomePage> {
                       backgroundColor: Colors.redAccent,
                     ),
                     onPressed: () {
-                   
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) {
+                          return const RegisterPage();
+                        }),
+                      );
                     },
                     child: const Text('Register'),
                   ),
