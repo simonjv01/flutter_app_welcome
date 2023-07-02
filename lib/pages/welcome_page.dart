@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_welcome/widgets/login_button_widget.dart';
 import 'package:flutter_app_welcome/widgets/register_button_widget.dart';
-import 'register_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
