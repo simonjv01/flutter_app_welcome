@@ -36,7 +36,14 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
               const SizedBox(height: 50.0),
-              Image.asset('images/welcome.png')
+              Image.asset('images/welcome.png'),
+              const SizedBox(height: 50.0),
+              Container(
+                height: 150.0,
+                width: 150.0,
+                color: Colors.black45,
+              )
+
             ],
           ),
         ),
