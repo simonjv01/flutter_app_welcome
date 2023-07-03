@@ -41,7 +41,10 @@ class _WelcomePageState extends State<WelcomePage> {
               Container(
                 height: 150.0,
                 width: 150.0,
-                color: Colors.black45,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40.0),
+                  color: Colors.black45,
+                ),
               )
 
             ],
