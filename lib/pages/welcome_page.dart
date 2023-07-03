@@ -45,8 +45,11 @@ class _WelcomePageState extends State<WelcomePage> {
                   borderRadius: BorderRadius.circular(40.0),
                   color: Colors.black45,
                 ),
-              )
-
+                child: const Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                ),
+              ),
             ],
           ),
         ),
