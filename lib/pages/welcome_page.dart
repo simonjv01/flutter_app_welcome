@@ -39,9 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Image.asset('images/welcome.png'),
               const SizedBox(height: 50.0),
               GestureDetector(
-                onTap: () {
-                  print('click');
-                },
+                onTap: () {},
                 child: Container(
                   height: 150.0,
                   width: double.infinity,
