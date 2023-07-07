@@ -41,9 +41,6 @@ class _WelcomePageState extends State<WelcomePage> {
               GestureDetector(
                 onTap: () {},
                 child: Container(
-                  margin: const EdgeInsets.all(50.0),
-                  height: 150.0,
-                  width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40.0),
                     color: Colors.black45,
