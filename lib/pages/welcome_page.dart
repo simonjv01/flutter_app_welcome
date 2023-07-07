@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_welcome/pages/more_page.dart';
 import 'package:flutter_app_welcome/widgets/login_button_widget.dart';
 import 'package:flutter_app_welcome/widgets/register_button_widget.dart';
 
@@ -39,7 +40,15 @@ class _WelcomePageState extends State<WelcomePage> {
               Image.asset('images/welcome.png'),
               const SizedBox(height: 50.0),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const MorePage();
+                      },
+                    ),
+                  );
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40.0),
