@@ -14,6 +14,12 @@ class MorePage extends StatelessWidget {
         title: Text(title),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.more_horiz),
+          ),
+        ],
       ),
     );
   }
