@@ -44,7 +44,9 @@ class _WelcomePageState extends State<WelcomePage> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) {
-                        return const MorePage();
+                        return const MorePage(
+                          title: 'More Page',
+                        );
                       },
                     ),
                   );
