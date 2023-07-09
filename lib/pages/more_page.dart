@@ -14,6 +14,15 @@ class MorePage extends StatelessWidget {
         title: Text(title),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
+        leading: IconButton(
+          onPressed: () {
+            ScaffoldMessenger.of(context).clearMaterialBanners();
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+          ),
+        ),
         actions: [
           IconButton(
             onPressed: () {
