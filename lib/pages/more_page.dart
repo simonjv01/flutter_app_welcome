@@ -28,14 +28,22 @@ class MorePage extends StatelessWidget {
             onPressed: () {
               ScaffoldMessenger.of(context).showMaterialBanner(
                 MaterialBanner(
-                    content: const Text('This is a Material Banner'),
-                    actions: <Widget>[
-                      TextButton(
-                        onPressed: () => ScaffoldMessenger.of(context)
-                            .hideCurrentMaterialBanner(),
-                        child: const Text('DISMISS'),
-                      ),
-                    ]),
+                  content: const Text('This is a Material Banner'),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => ScaffoldMessenger.of(context)
+                          .hideCurrentMaterialBanner(),
+                      child: const Text('DISMISS'),
+                    ),
+                    OutlinedButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context)
+                            .removeCurrentMaterialBanner();
+                      },
+                      child: const Text('Remove'),
+                    ),
+                  ],
+                ),
               );
             },
             icon: const Icon(Icons.more_horiz),
