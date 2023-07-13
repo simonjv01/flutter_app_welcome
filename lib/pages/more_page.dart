@@ -30,6 +30,10 @@ class MorePage extends StatelessWidget {
                 MaterialBanner(
                   content: const Text('This is a Material Banner'),
                   actions: <Widget>[
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('Change color'),
+                    ),
                     TextButton(
                       onPressed: () => ScaffoldMessenger.of(context)
                           .hideCurrentMaterialBanner(),
@@ -40,7 +44,7 @@ class MorePage extends StatelessWidget {
                         ScaffoldMessenger.of(context)
                             .removeCurrentMaterialBanner();
                       },
-                      child: const Text('Remove'),
+                      child: const Text('REMOVE'),
                     ),
                   ],
                 ),
