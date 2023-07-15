@@ -9,7 +9,7 @@ class RegisterPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Register Page'),
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.blueAccent,
       ),
     );
   }

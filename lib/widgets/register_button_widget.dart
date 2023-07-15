@@ -9,7 +9,7 @@ class RegisterButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.blueAccent,
       ),
       onPressed: () {
         Navigator.of(context).push(

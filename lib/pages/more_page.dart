@@ -13,7 +13,7 @@ class MorePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.blueAccent,
         leading: IconButton(
           onPressed: () {
             ScaffoldMessenger.of(context).clearMaterialBanners();

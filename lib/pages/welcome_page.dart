@@ -17,7 +17,7 @@ class _WelcomePageState extends State<WelcomePage> {
       appBar: AppBar(
         title: const Text('Welcome'),
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.blueAccent,
       ),
       body: SingleChildScrollView(
         child: Center(
