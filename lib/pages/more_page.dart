@@ -13,6 +13,7 @@ class MorePage extends StatefulWidget {
 
 class _MorePageState extends State<MorePage> {
   bool isBlue = false;
+  int numberOfListTile = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +32,14 @@ class _MorePageState extends State<MorePage> {
           ),
         ),
         actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                numberOfListTile++;
+              });
+            
+          },
+          icon: const Icon(Icons.add),),
           IconButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showMaterialBanner(
@@ -65,15 +74,17 @@ class _MorePageState extends State<MorePage> {
           ),
         ],
       ),
-      body: ListView(
-      children: const [
-        ListTile(
+      body: ListView.builder(
+        itemBuilder:(context, index) {
+          return const ListTile(
           title: Text('Item'),
           tileColor: Colors.blueGrey,
           leading: Icon(Icons.radio_button_checked),
           trailing: Icon(Icons.radio_button_checked),
-        ),
-      ],) 
+        );
+        },
+        itemCount: numberOfListTile,
+        ) 
       
       
 
