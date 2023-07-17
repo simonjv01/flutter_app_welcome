@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MorePage extends StatelessWidget {
+class MorePage extends StatefulWidget {
   const MorePage({
     super.key,
     required this.title,
@@ -8,10 +8,17 @@ class MorePage extends StatelessWidget {
   final String title;
 
   @override
+  State<MorePage> createState() => _MorePageState();
+}
+
+class _MorePageState extends State<MorePage> {
+  bool isBlue = false;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: isBlue ? Colors.blueAccent : null,
       appBar: AppBar(
-        title: Text(title),
+        title: Text(widget.title),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
         leading: IconButton(
@@ -31,7 +38,11 @@ class MorePage extends StatelessWidget {
                   content: const Text('This is a Material Banner'),
                   actions: <Widget>[
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          isBlue = !isBlue;
+                        });
+                      },
                       child: const Text('Change color'),
                     ),
                     TextButton(
