@@ -74,16 +74,19 @@ class _MorePageState extends State<MorePage> {
           ),
         ],
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemBuilder:(context, index) {
           return const ListTile(
           title: Text('Item'),
-          tileColor: Colors.blueGrey,
           leading: Icon(Icons.radio_button_checked),
           trailing: Icon(Icons.radio_button_checked),
         );
         },
         itemCount: numberOfListTile,
+        separatorBuilder: (context, index){
+          return const Divider(thickness: 2,);
+        },
+
         ) 
       
       
