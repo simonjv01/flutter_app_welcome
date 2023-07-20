@@ -98,8 +98,7 @@ class _MorePageState extends State<MorePage> {
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(theList.elementAt(index).title),
-              leading: Icon(Icons.radio_button_checked),
-              trailing: Icon(Icons.radio_button_checked),
+              leading: theList.elementAt(index).icon,
             );
           },
           itemCount: theList.length,
