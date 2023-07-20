@@ -23,6 +23,12 @@ class MorePage extends StatefulWidget {
 class _MorePageState extends State<MorePage> {
   bool isBlue = false;
   int numberOfListTile = 1;
+  List<TileInformation> theList = [
+    TileInformation(
+      title: 'Item',
+      icon: const Icon(Icons.radar_outlined),
+    )
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
