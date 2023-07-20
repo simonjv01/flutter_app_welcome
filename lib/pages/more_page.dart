@@ -22,7 +22,7 @@ class MorePage extends StatefulWidget {
 
 class _MorePageState extends State<MorePage> {
   bool isBlue = false;
-  int numberOfListTile = 1;
+
   List<TileInformation> theList = [
     TileInformation(
       title: 'Item',
@@ -50,7 +50,12 @@ class _MorePageState extends State<MorePage> {
             IconButton(
               onPressed: () {
                 setState(() {
-                  numberOfListTile++;
+                  theList.add(
+                    TileInformation(
+                      title: 'Item',
+                      icon: const Icon(Icons.radio_button_checked),
+                    ),
+                  );
                 });
               },
               icon: const Icon(Icons.add),
@@ -91,13 +96,13 @@ class _MorePageState extends State<MorePage> {
         ),
         body: ListView.separated(
           itemBuilder: (context, index) {
-            return const ListTile(
-              title: Text('Item'),
+            return ListTile(
+              title: Text(theList.elementAt(index).title),
               leading: Icon(Icons.radio_button_checked),
               trailing: Icon(Icons.radio_button_checked),
             );
           },
-          itemCount: numberOfListTile,
+          itemCount: theList.length,
           separatorBuilder: (context, index) {
             return const Divider(
               thickness: 2,
