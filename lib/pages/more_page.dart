@@ -64,7 +64,7 @@ class _MorePageState extends State<MorePage> {
               onPressed: () {
                 ScaffoldMessenger.of(context).showMaterialBanner(
                   MaterialBanner(
-                    content: const Text('This is a Material Banner'),
+                    content: const Text('This Banner is Material'),
                     actions: <Widget>[
                       ElevatedButton(
                         onPressed: () {
