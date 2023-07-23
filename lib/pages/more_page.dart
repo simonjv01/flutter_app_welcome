@@ -110,3 +110,12 @@ class _MorePageState extends State<MorePage> {
         ));
   }
 }
+
+class IconRandomized extends StatelessWidget {
+  const IconRandomized({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Icon(Icons.radio_button_checked);
+  }
+}
