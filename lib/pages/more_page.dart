@@ -53,7 +53,7 @@ class _MorePageState extends State<MorePage> {
                   theList.add(
                     TileInformation(
                       title: 'Item',
-                      icon: const Icon(Icons.radio_button_checked),
+                      icon: const IconRandomized(),
                     ),
                   );
                 });
