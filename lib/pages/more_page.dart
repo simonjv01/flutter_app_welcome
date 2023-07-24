@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class TileInformation {
@@ -23,12 +25,7 @@ class MorePage extends StatefulWidget {
 class _MorePageState extends State<MorePage> {
   bool isBlue = false;
 
-  List<TileInformation> theList = [
-    TileInformation(
-      title: 'Item',
-      icon: const Icon(Icons.radar_outlined),
-    )
-  ];
+  List<TileInformation> theList = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,6 +113,9 @@ class IconRandomized extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Icon(Icons.radio_button_checked);
+    bool randomBool = Random().nextBool();
+    return randomBool
+    ? const Icon(Icons.radio_button_checked)
+    : const Icon(Icons.radio_button_unchecked);
   }
 }
