@@ -49,7 +49,7 @@ class _MorePageState extends State<MorePage> {
                 setState(() {
                   theList.add(
                     TileInformation(
-                      title: 'Item',
+                      title: 'Item ${theList.length + 1}',
                       icon: const IconRandomized(),
                     ),
                   );
