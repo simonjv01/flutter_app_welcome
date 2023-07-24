@@ -6,9 +6,11 @@ class TileInformation {
   TileInformation({
     required this.title,
     required this.icon,
+    required this.id,
   });
   final String title;
   final Widget icon;
+  final String id;
 }
 
 class MorePage extends StatefulWidget {
@@ -51,6 +53,7 @@ class _MorePageState extends State<MorePage> {
                     TileInformation(
                       title: 'Item ${theList.length + 1}',
                       icon: const IconRandomized(),
+                      id: (theList.length + 1).toString(),
                     ),
                   );
                 });
@@ -94,6 +97,15 @@ class _MorePageState extends State<MorePage> {
         body: ListView.separated(
           itemBuilder: (context, index) {
             return ListTile(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => OtherPage(
+                      tileInformation: theList.elementAt(index),
+                    ),
+                  ),
+                );
+              },
               title: Text(theList.elementAt(index).title),
               leading: theList.elementAt(index).icon,
             );
@@ -115,7 +127,27 @@ class IconRandomized extends StatelessWidget {
   Widget build(BuildContext context) {
     bool randomBool = Random().nextBool();
     return randomBool
-    ? const Icon(Icons.radio_button_checked)
-    : const Icon(Icons.radio_button_unchecked);
+        ? const Icon(Icons.radio_button_checked)
+        : const Icon(Icons.radio_button_unchecked);
+  }
+}
+
+class OtherPage extends StatelessWidget {
+  const OtherPage({super.key, required this.tileInformation});
+
+  final TileInformation tileInformation;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('OtherPage'),
+      ),
+      body: const Center(
+        child: ListTile(
+          title: Text('Hello'),
+        ),
+      ),
+    );
   }
 }
