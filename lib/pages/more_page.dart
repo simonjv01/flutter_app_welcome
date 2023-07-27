@@ -141,6 +141,7 @@ class OtherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(tileInformation.title),
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
