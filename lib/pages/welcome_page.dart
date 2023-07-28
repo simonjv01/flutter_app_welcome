@@ -23,6 +23,8 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Center(
           child: Column(
             children: [
+              const SizedBox(height: 50.0),
+              Image.asset('images/welcome.png'),
               const SizedBox(
                 height: 50.0,
               ),
@@ -37,28 +39,29 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
               const SizedBox(height: 50.0),
-              Image.asset('images/welcome.png'),
-              const SizedBox(height: 50.0),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const MorePage(
-                          title: 'More Page',
-                        );
-                      },
+              Visibility(
+                visible: false,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const MorePage(
+                            title: 'More Page',
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40.0),
+                      color: Colors.black45,
                     ),
-                  );
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40.0),
-                    color: Colors.black45,
-                  ),
-                  child: const Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
+                    child: const Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

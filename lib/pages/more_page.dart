@@ -148,7 +148,11 @@ class OtherPage extends StatelessWidget {
         child: ListTile(
           title: Text(
             tileInformation.title,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.bold),
+              
           ),
           tileColor: Colors.blueAccent,
         ),
