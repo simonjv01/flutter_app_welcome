@@ -16,15 +16,13 @@ class _LoginPageState extends State<LoginPage> {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: SingleChildScrollView(
-        child: Center(
-            child: Column(
-          children: [
-            const SizedBox(height: 50.0),
-            Image.asset('images/rocket.png'),
-          ],
-        )),
-      ),
+      body: Center(
+          child: Column(
+        children: [
+          const SizedBox(height: 50.0),
+          Image.asset('images/rocket.png'),
+        ],
+      )),
     );
   }
 }
