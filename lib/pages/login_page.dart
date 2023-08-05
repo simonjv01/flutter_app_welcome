@@ -16,6 +16,7 @@ class LoginPage extends StatelessWidget {
         children: [
           const SizedBox(height: 50.0),
           Image.asset('images/rocket.png'),
+          TextFormField(),
         ],
       )),
     );
