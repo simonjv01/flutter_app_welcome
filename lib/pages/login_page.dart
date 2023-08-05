@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+TextEditingController controllerEmail = TextEditingController();
+
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -16,7 +19,12 @@ class LoginPage extends StatelessWidget {
         children: [
           const SizedBox(height: 50.0),
           Image.asset('images/rocket.png'),
-          TextFormField(),
+          TextFormField(
+            controller: controllerEmail,
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+            ),
+          ),
         ],
       )),
     );
