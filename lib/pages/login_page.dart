@@ -31,7 +31,22 @@ class LoginPage extends StatelessWidget {
                     border: OutlineInputBorder(),
                     hintText: 'Email',
                   ),
+                  validator: (String? value) {
+                    if(value == null) {
+                      return 'This cannot be null';
+                    }
+                    if(value.isEmpty){
+                      return 'Enter email';
+                    }
+                    return null;
+                    
+                  },
                 ),
+                ElevatedButton(
+                 onPressed: (){
+                  formKey.currentState!.validate();
+                 },
+                 child: const Text('Login'),),
                       ],
                     ),
               )),
