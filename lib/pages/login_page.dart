@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 TextEditingController controllerEmail = TextEditingController();
+final formKey = GlobalKey<FormState>();
 
 
 class LoginPage extends StatelessWidget {
@@ -14,23 +15,28 @@ class LoginPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-                  children: [
-            const SizedBox(height: 50.0),
-            Image.asset('images/rocket.png'),
-            TextFormField(
-              controller: controllerEmail,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Email',
-              ),
-            ),
-                  ],
+      body: SingleChildScrollView(
+        child: Form(
+          key: formKey,
+          child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                      children: [
+                const SizedBox(height: 50.0),
+                Image.asset('images/rocket.png'),
+                TextFormField(
+                  controller: controllerEmail,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Email',
+                  ),
                 ),
-          )),
+                      ],
+                    ),
+              )),
+        ),
+      ),
     );
   }
 }
