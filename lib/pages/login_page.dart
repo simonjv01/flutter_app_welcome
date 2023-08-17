@@ -69,14 +69,26 @@ class LoginPage extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Success'),
+                        duration: Duration(milliseconds: 500),
                         ),
-                        );
-                  }
+                      );
+                    }
+                    else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Failure'),
+                        duration: Duration(milliseconds: 500),
+                        ),
+                      
+                    );
+                    }
                  },
-                 child: const Text('Login'),),
+                 child: const Text('Login'),
+                 ),
                       ],
                     ),
-              )),
+              )
+              ),
         ),
       ),
     );
