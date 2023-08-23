@@ -24,9 +24,9 @@ class LoginPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
-                      children: [
-                const SizedBox(height: 20.0),
+                  children: [
                 Image.asset('images/rocket.png'),
+                 const SizedBox(height: 20.0),
                 TextFormField(
                   controller: controllerEmail,
                   decoration: const InputDecoration(

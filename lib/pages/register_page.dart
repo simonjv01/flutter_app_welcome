@@ -16,15 +16,16 @@ class RegisterPage extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
       ),
       body: SingleChildScrollView(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(50.0),
-            child: Form(
+        reverse: true,
+        child: Form(
+          key: formKey,
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
-                  const SizedBox(height: 50.0),
                   Image.asset('images/rock.png'),
-                  const SizedBox(height: 50.0),
+                  const SizedBox(height: 20.0),
                   TextFormField(
                     controller: controllerEmail,
                     decoration: const InputDecoration(
@@ -43,8 +44,8 @@ class RegisterPage extends StatelessWidget {
                   },
                   ),
                   const SizedBox(height: 20.0),
-                                    TextFormField(
-                    controller: controllerEmail,
+                  TextFormField(
+                    controller: controllerPassword,
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: 'Password',
@@ -60,12 +61,36 @@ class RegisterPage extends StatelessWidget {
                     
                   },
                   ),
-
+                  const SizedBox(height: 10.0,),
+                  ElevatedButton(
+                    onPressed: (){
+                      if(formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Success'),
+                            duration: Duration(milliseconds: 500),
+                            ),
+                        );
+                      }
+                      else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                          content: Text('Failure'),
+                          duration: Duration(milliseconds: 500),
+                          ),
+                        );
+                      }
+                    }, 
+                    child: const Text('Register'),
+                  ),
+        
                 ],
-              ))
+              ),
+          )
+              ),
         ),
-      ),
 
+    ),
     );
   }
 }
