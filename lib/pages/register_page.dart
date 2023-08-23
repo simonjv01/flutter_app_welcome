@@ -15,21 +15,12 @@ class RegisterPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Form(
+      body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            children: [
-              Image.asset('images/cactus.png'),
-              TextFormField(
-                controller: controllerEmail,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Email',
-                ),
-              )
-            ]),
+          child: Padding(padding: EdgeInsets.all(50.0)),
         ),
       ),
+
     );
   }
 }
