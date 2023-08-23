@@ -31,6 +31,16 @@ class RegisterPage extends StatelessWidget {
                       border: OutlineInputBorder(),
                       hintText: 'Email',
                     ),
+                    validator: (String? value) {
+                    if(value == null) {
+                      return 'This cannot be null';
+                    }
+                    if(value.isEmpty){
+                      return 'Password cannot be empty';
+                    }
+                    return null;
+                    
+                  },
                   )
                 ],
               ))
