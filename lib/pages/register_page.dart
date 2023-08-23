@@ -17,7 +17,23 @@ class RegisterPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Center(
-          child: Padding(padding: EdgeInsets.all(50.0)),
+          child: Padding(
+            padding: EdgeInsets.all(50.0),
+            child: Form(
+              child: Column(
+                children: [
+                  const SizedBox(height: 50.0),
+                  Image.asset('images/rock.png'),
+                  const SizedBox(height: 50.0),
+                  TextFormField(
+                    controller: controllerEmail,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Email',
+                    ),
+                  )
+                ],
+              ))
         ),
       ),
 
