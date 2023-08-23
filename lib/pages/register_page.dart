@@ -18,7 +18,7 @@ class RegisterPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(50.0),
+            padding: const EdgeInsets.all(50.0),
             child: Form(
               child: Column(
                 children: [
@@ -36,12 +36,31 @@ class RegisterPage extends StatelessWidget {
                       return 'This cannot be null';
                     }
                     if(value.isEmpty){
+                      return 'Email cannot be empty';
+                    }
+                    return null;
+                    
+                  },
+                  ),
+                  const SizedBox(height: 20.0),
+                                    TextFormField(
+                    controller: controllerEmail,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Password',
+                    ),
+                    validator: (String? value) {
+                    if(value == null) {
+                      return 'This cannot be null';
+                    }
+                    if(value.isEmpty){
                       return 'Password cannot be empty';
                     }
                     return null;
                     
                   },
-                  )
+                  ),
+
                 ],
               ))
         ),
