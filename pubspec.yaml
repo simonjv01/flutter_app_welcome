@@ -34,11 +34,11 @@ flutter_launcher_icons:
     # theme_color: "#hexcode"
   windows:
     generate: true
-    image_path: "path/to/image.png"
+    image_path: "images/flutterCircle.png"
     icon_size: 48
   macos:
     generate: true
-    image_path: "path/to/image.png"
+    image_path: "images/flutterCircle.png"
 
 flutter:
   uses-material-design: true
