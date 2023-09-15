@@ -22,11 +22,11 @@ class LoginPage extends StatelessWidget {
           key: formKey,
           child: Center(
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(25.0),
                 child: Column(
                   children: [
                 Image.asset('images/rocket.png'),
-                 const SizedBox(height: 20.0),
+                 const SizedBox(height: 30.0),
                 TextFormField(
                   controller: controllerEmail,
                   decoration: const InputDecoration(
