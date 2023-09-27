@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_welcome/pages/home/profile.dart';
+import 'home/home.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+   HomePage({super.key});
 
   int currentPage = 0;
-  List<Widget> pages = [];
+  List<Widget> pages = const [
+    Home(),
+    Profile(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +21,17 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: pages.elementAt(currentPage),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+            ),
+        ]),
     
     );
   }
