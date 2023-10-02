@@ -15,7 +15,7 @@ class _WidgetTreeState extends State<WidgetTree> {
     return StreamBuilder(
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return const HomePage();
+          return HomePage();
         } else {
           return const WelcomePage();
         }
