@@ -3,10 +3,16 @@ import 'package:flutter_app_welcome/pages/home/profile.dart';
 import 'home/home.dart';
 
 // ignore: must_be_immutable
-class HomePage extends StatelessWidget {
-   HomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   int currentPage = 0;
+
   List<Widget> pages = const [
     Home(),
     Profile(),
@@ -26,13 +32,19 @@ class HomePage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            ),
-             BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
-            ),
-        ]),
-    
+          ),
+        ],
+        currentIndex: currentPage,
+        onTap: (int index) {
+          setState(() {
+            currentPage = index;
+          });
+        },
+      ),
     );
   }
 }
