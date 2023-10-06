@@ -22,8 +22,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Email'),
-        backgroundColor: Colors.blueAccent,
+        title: const Text('Welcome App'),
+        backgroundColor: Colors.greenAccent,
         centerTitle: true,
       ),
       body: pages.elementAt(currentPage),
