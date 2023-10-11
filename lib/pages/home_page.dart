@@ -28,7 +28,21 @@ class _HomePageState extends State<HomePage> {
       ),
       body: pages.elementAt(currentPage),
       drawer: Drawer(
-        child: ListView(children: []),
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: ListTile(
+                title: Text('Flutter Map'),
+              ),
+            ),
+            ListTile(
+              title: const Text('Logout'),
+              onTap: () {
+                'logout';
+              },
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
