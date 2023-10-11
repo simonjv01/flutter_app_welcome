@@ -27,6 +27,9 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: pages.elementAt(currentPage),
+      drawer: Drawer(
+        child: ListView(children: []),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
