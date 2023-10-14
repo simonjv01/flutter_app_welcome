@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               child: ListTile(
                 title: Text('Flutter Map'),
               ),
