@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.amber),
               child: ListTile(
                 title: Text('Flutter Map'),
               ),
