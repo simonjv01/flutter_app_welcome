@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(color: Colors.amber),
               child: ListTile(
                 title: Text('Flutter Map'),
+                textColor: Colors.white,
               ),
             ),
             ListTile(
