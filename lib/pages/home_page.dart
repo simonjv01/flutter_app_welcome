@@ -27,23 +27,26 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: pages.elementAt(currentPage),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(color: Colors.amber),
-              child: ListTile(
-                title: Text('Flutter Map'),
-                textColor: Colors.white,
+      drawer: SafeArea(
+        child: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(color: Colors.amber),
+                child: ListTile(
+                  title: Text('Flutter Map'),
+                  textColor: Colors.white,
+                ),
               ),
-            ),
-            ListTile(
-              title: const Text('Logout'),
-              onTap: () {
-                'logout';
-              },
-            )
-          ],
+              ListTile(
+                leading: const Icon(Icons.logout),
+                title: const Text('Logout'),
+                onTap: () {
+                  'logout';
+                },
+              )
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
