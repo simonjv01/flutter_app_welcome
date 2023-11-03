@@ -34,6 +34,9 @@ class _HomePageState extends State<HomePage> {
               const DrawerHeader(
                 decoration: BoxDecoration(color: Colors.amber),
                 child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage('images/flutterCircle.png'),
+                  ),
                   title: Text('Flutter Map'),
                   textColor: Colors.white,
                 ),
