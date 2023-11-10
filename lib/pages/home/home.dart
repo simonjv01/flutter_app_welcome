@@ -36,6 +36,15 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(height: 20.0),
+              CheckboxListTile(
+                  value: isAgree,
+                  onChanged: (bool? newBool) {
+                    setState(() {
+                      if (newBool != null) {
+                        isAgree = newBool;
+                      }
+                    });
+                  })
             ],
           ),
         ),
