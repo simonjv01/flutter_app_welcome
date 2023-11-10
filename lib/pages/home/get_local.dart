@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class GetLocal extends StatefulWidget {
+  const GetLocal({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<GetLocal> createState() => _GetLocalState();
 }
 
-class _HomeState extends State<Home> {
+class _GetLocalState extends State<GetLocal> {
   TextEditingController controllerName = TextEditingController();
   TextEditingController controllerAge = TextEditingController();
   bool isAgree = false;
