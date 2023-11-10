@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_welcome/pages/home/get_local.dart';
 import 'package:flutter_app_welcome/pages/home/profile.dart';
+import 'package:flutter_app_welcome/pages/home/set_local.dart';
 import 'home/home.dart';
 
 // ignore: must_be_immutable
@@ -13,10 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentPage = 0;
 
-  List<Widget> pages = const [
-    Home(),
-    Profile(),
-  ];
+  List<Widget> pages = const [Home(), Profile(), SetLocal(), GetLocal()];
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +52,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -61,6 +61,14 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Setting',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
           ),
         ],
         currentIndex: currentPage,
