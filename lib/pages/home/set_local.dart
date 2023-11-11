@@ -20,6 +20,7 @@ class _SetLocalState extends State<SetLocal> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Image.asset('images/bag.png'),
               TextFormField(
                 controller: controllerName,
                 decoration: const InputDecoration(
@@ -37,15 +38,22 @@ class _SetLocalState extends State<SetLocal> {
               ),
               const SizedBox(height: 20.0),
               CheckboxListTile(
-                  title: const Text('Do you agree the terms?'),
-                  value: isAgree,
-                  onChanged: (bool? newBool) {
-                    setState(() {
+                title: const Text('Do you agree the terms?'),
+                value: isAgree,
+                onChanged: (bool? newBool) {
+                  setState(
+                    () {
                       if (newBool != null) {
                         isAgree = newBool;
                       }
-                    });
-                  })
+                    },
+                  );
+                },
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text('Get data local'),
+              )
             ],
           ),
         ),
